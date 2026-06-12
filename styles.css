@@ -78,6 +78,7 @@ table {
 width: 100%;
 table-layout: fixed;
 border-collapse: collapse;
+min-width: 760px;
 }
 
 thead th {
@@ -234,5 +235,76 @@ table {
 .dependency-list li {
     grid-template-columns: 1fr;
 }
+/* =========================
+   Tablet
+========================= */
 
+@media (max-width: 900px) {
+
+    .page {
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .upcoming {
+        width: 100%;
+    }
+
+    .delivery {
+        flex: 1;
+        min-width: 220px;
+    }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding: 14px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .card {
+        padding: 16px;
+        margin-bottom: 20px;
+        overflow-x: auto;
+    }
+
+    .delivery {
+        width: 100%;
+        min-width: unset;
+    }
+
+    table {
+        min-width: 720px;
+    }
+
+    thead th,
+    tbody td {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .badge {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+}
 }
