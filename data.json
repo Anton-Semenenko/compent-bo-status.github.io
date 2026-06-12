@@ -99,7 +99,7 @@
     }
   ],
 
-  "questions&stoppers": [
+  "questionsAndStoppers": [
     {
       "item": "Coming soon for Search on prod",
       "type": "Question",
