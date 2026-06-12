@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Board-Office Status</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div>
+        <h1>Board-Office Status</h1>
+        <p id="lastUpdated"></p>
+      </div>
+      <div id="upcoming" class="upcoming"></div>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Portal</h2>
+        <div id="portalList"></div>
+      </div>
+
+      <div class="card">
+        <h2>Hub</h2>
+        <div id="hubList"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Questions & Stoppers</h2>
+      <div id="dependenciesList"></div>
+    </section>
+  </main>
+
+  <script>
+    fetch("data.json")
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("lastUpdated").textContent =
+          `Last updated: ${data.lastUpdated}`;
+
+        document.getElementById("upcoming").innerHTML =
+          data.upcomingDeliveries.map(item => `
+            <div class="delivery">
+              <span>${item.scope} upcoming delivery</span>
+              <strong>${item.delivery}</strong>
+            </div>
+          `).join("");
+
+        renderScope("portalList", data.portal);
+        renderScope("hubList", data.hub);
+        renderDependencies(data.dependencies);
+      });
+
+    function statusClass(status) {
+      const value = status.toLowerCase();
+      if (value.includes("done") || value.includes("completed")) return "green";
+      if (value.includes("progress")) return "yellow";
+      if (value.includes("blocked")) return "red";
+      return "gray";
+    }
+
+    function renderScope(elementId, items) {
+      document.getElementById(elementId).innerHTML = items.map(item => `
+        <div class="row">
+          <div>
+            <strong>${item.name}</strong>
+            <div class="eta">Stage: ${item.stageEta} · Prod: ${item.prodEta}</div>
+          </div>
+          <span class="status ${statusClass(item.status)}">${item.status}</span>
+        </div>
+      `).join("");
+    }
+
+    function renderDependencies(items) {
+      document.getElementById("dependenciesList").innerHTML = items.map(item => {
+        const typeClass = item.type.toLowerCase().includes("blocker") ? "red" : "yellow";
+        return `
+          <div class="row">
+            <div>
+              <strong>${item.item}</strong>
+              <div class="eta">${item.status}</div>
+            </div>
+            <span class="status ${typeClass}">${item.type}</span>
+          </div>
+        `;
+      }).join("");
+    }
+  </script>
+</body>
+</html>

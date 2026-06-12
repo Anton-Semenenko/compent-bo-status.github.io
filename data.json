@@ -1,0 +1,36 @@
+{
+  "lastUpdated": "2026-06-12",
+  "upcomingDeliveries": [
+    {
+      "scope": "Portal",
+      "delivery": "W25"
+    },
+    {
+      "scope": "Hub",
+      "delivery": "Week 26"
+    }
+  ],
+  "portal": [
+    {
+      "name": "Quick Links for Agenda Sharing",
+      "status": "In Progress",
+      "stageEta": "W26",
+      "prodEta": "W27"
+    }
+  ],
+  "hub": [
+    {
+      "name": "Video/audio recording",
+      "status": "In Progress",
+      "stageEta": "W26",
+      "prodEta": "TBD"
+    }
+  ],
+  "dependencies": [
+    {
+      "item": "Final scope confirmation",
+      "type": "Question",
+      "status": "Waiting for client"
+    }
+  ]
+}
