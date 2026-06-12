@@ -16,19 +16,34 @@
       <div id="upcoming" class="upcoming"></div>
     </header>
 
-    <section class="card">
-      <h2>Portal</h2>
-      <div id="portalTable"></div>
+    <section class="card collapsed-section" id="portalSection">
+      <button class="section-toggle" onclick="toggleSection('portalSection')">
+        <span id="portalTitle">Portal</span>
+        <span class="toggle-action">Show</span>
+      </button>
+      <div class="section-content">
+        <div id="portalTable"></div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Hub</h2>
-      <div id="hubTable"></div>
+    <section class="card collapsed-section" id="hubSection">
+      <button class="section-toggle" onclick="toggleSection('hubSection')">
+        <span id="hubTitle">Hub</span>
+        <span class="toggle-action">Show</span>
+      </button>
+      <div class="section-content">
+        <div id="hubTable"></div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Questions & Stoppers</h2>
-      <div id="questionsAndStoppersTable"></div>
+    <section class="card collapsed-section" id="questionsSection">
+      <button class="section-toggle" onclick="toggleSection('questionsSection')">
+        <span id="questionsTitle">Questions & Stoppers</span>
+        <span class="toggle-action">Show</span>
+      </button>
+      <div class="section-content">
+        <div id="questionsAndStoppersTable"></div>
+      </div>
     </section>
   </main>
 
@@ -40,6 +55,11 @@
           `Last updated: ${data.lastUpdated}`;
 
         renderUpcoming(data.upcomingDeliveries || []);
+
+        updateSectionTitle("portalTitle", "Portal", data.portal || []);
+        updateSectionTitle("hubTitle", "Hub", data.hub || []);
+        updateQuestionsTitle(data.questionsAndStoppers || []);
+
         renderTable("portalTable", data.portal || [], data);
         renderTable("hubTable", data.hub || [], data);
         renderQuestionsAndStoppers(data.questionsAndStoppers || []);
@@ -57,9 +77,28 @@
       `).join("");
     }
 
+    function updateSectionTitle(elementId, label, items) {
+      document.getElementById(elementId).textContent = `${label} (${items.length})`;
+    }
+
+    function updateQuestionsTitle(items) {
+      const stoppers = items.filter(i => i.type === "Stopper" || i.type === "Blocker").length;
+      const questions = items.length - stoppers;
+
+      document.getElementById("questionsTitle").textContent =
+        `Questions & Stoppers (${items.length}) — ${stoppers} Stopper / ${questions} Question`;
+    }
+
+    function toggleSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.classList.toggle("collapsed-section");
+
+      const action = section.querySelector(".toggle-action");
+      action.textContent = section.classList.contains("collapsed-section") ? "Show" : "Hide";
+    }
+
     function getStatusClass(status, data) {
       if (!status) return "todo";
-
       const statusConfig = data.statusConfig || {};
       return statusConfig[status] || "todo";
     }
@@ -70,11 +109,11 @@
 
         return `
           <tr>
-            <td class="number-col">${index + 1}</td>
-            <td class="priority-cell">${item.name}</td>
-            <td><span class="badge ${badgeClass}">${item.status}</span></td>
-            <td class="delivery-cell">${item.stageEta}</td>
-            <td class="delivery-cell">${item.prodEta}</td>
+            <td class="number-col" data-label="#">${index + 1}</td>
+            <td class="priority-cell" data-label="Priority">${item.name}</td>
+            <td data-label="Status"><span class="badge ${badgeClass}">${item.status}</span></td>
+            <td class="delivery-cell" data-label="Stage delivery">${item.stageEta}</td>
+            <td class="delivery-cell" data-label="Production delivery">${item.prodEta}</td>
           </tr>
         `;
       }).join("");
@@ -90,9 +129,7 @@
               <th class="prod-col">Production delivery</th>
             </tr>
           </thead>
-          <tbody>
-            ${rows}
-          </tbody>
+          <tbody>${rows}</tbody>
         </table>
       `;
     }
@@ -105,10 +142,10 @@
 
         return `
           <tr>
-            <td class="number-col">${index + 1}</td>
-            <td><span class="badge ${typeClass}">${item.type}</span></td>
-            <td class="priority-cell">${item.item}</td>
-            <td>${item.status}</td>
+            <td class="number-col" data-label="#">${index + 1}</td>
+            <td data-label="Type"><span class="badge ${typeClass}">${item.type}</span></td>
+            <td class="priority-cell" data-label="Item">${item.item}</td>
+            <td data-label="Status / Notes">${item.status}</td>
           </tr>
         `;
       }).join("");
@@ -123,9 +160,7 @@
               <th class="prod-col">Status / Notes</th>
             </tr>
           </thead>
-          <tbody>
-            ${rows}
-          </tbody>
+          <tbody>${rows}</tbody>
         </table>
       `;
     }
