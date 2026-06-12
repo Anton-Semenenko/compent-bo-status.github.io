@@ -1,36 +1,114 @@
 {
   "lastUpdated": "2026-06-12",
+
+  "statusConfig": {
+    "Done": "done",
+    "In progress": "in-progress",
+    "In QA": "in-qa",
+    "Awaiting feedback": "awaiting-feedback",
+    "Stopped": "stopped",
+    "To Do": "todo"
+  },
+
   "upcomingDeliveries": [
     {
       "scope": "Portal",
-      "delivery": "W25"
+      "delivery": "Week 25"
     },
     {
       "scope": "Hub",
-      "delivery": "Week 26"
+      "delivery": "Week 25"
     }
   ],
+
   "portal": [
     {
-      "name": "Quick Links for Agenda Sharing",
-      "status": "In Progress",
-      "stageEta": "W26",
-      "prodEta": "W27"
+      "name": "Global Search",
+      "status": "In progress",
+      "stageEta": "Week 25",
+      "prodEta": "Week 26"
     }
   ],
+
   "hub": [
     {
       "name": "Video/audio recording",
-      "status": "In Progress",
+      "status": "In progress",
       "stageEta": "W26",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Generation of meeting minutes from transcription",
+      "status": "Done",
+      "stageEta": "Already on stage",
+      "prodEta": "Week 25"
+    },
+    {
+      "name": "Custom video background setting",
+      "status": "Done",
+      "stageEta": "Already on stage",
+      "prodEta": "Week 25"
+    },
+    {
+      "name": "Reminder to start recording and transcription",
+      "status": "In progress",
+      "stageEta": "Week 25",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Online chat in the room",
+      "status": "In QA",
+      "stageEta": "Already on stage",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Option to use generated transcription PDF as minutes",
+      "status": "Done",
+      "stageEta": "Already on stage",
+      "prodEta": "Week 25"
+    },
+    {
+      "name": "Transcription as minutes can be signed",
+      "status": "Done",
+      "stageEta": "Already on stage",
+      "prodEta": "Week 25"
+    },
+    {
+      "name": "AI cleanup of transcription",
+      "status": "Done",
+      "stageEta": "Already on stage",
+      "prodEta": "Week 25"
+    },
+    {
+      "name": "Join meeting on Board Overview",
+      "status": "In progress",
+      "stageEta": "Week 25",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Updated meeting creation design",
+      "status": "To Do",
+      "stageEta": "Week 26",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Recordings",
+      "status": "In progress",
+      "stageEta": "Week 25",
       "prodEta": "TBD"
     }
   ],
-  "dependencies": [
+
+  "questions&stoppers": [
     {
-      "item": "Final scope confirmation",
+      "item": "Coming soon for Search on prod",
       "type": "Question",
-      "status": "Waiting for client"
+      "status": "Confirmation/Mockup needed"
+    },
+    {
+      "item": "Internal decision on external users invitation",
+      "type": "Question",
+      "status": "Details and decision needed"
     }
   ]
 }

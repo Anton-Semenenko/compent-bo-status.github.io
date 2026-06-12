@@ -35,6 +35,7 @@
     fetch("data.json")
       .then(response => response.json())
       .then(data => {
+        window.statusConfig = data.statusConfig;
         document.getElementById("lastUpdated").textContent =
           `Last updated: ${data.lastUpdated}`;
 
@@ -50,15 +51,6 @@
         renderTable("hubTable", data.hub);
         renderDependencies(data.dependencies);
       });
-
-    function statusClass(status) {
-      const value = status.toLowerCase();
-      if (value.includes("done") || value.includes("completed")) return "green";
-      if (value.includes("progress")) return "yellow";
-      if (value.includes("blocked")) return "red";
-      return "gray";
-    }
-
     function renderTable(elementId, items) {
       document.getElementById(elementId).innerHTML = `
         <table>
@@ -76,7 +68,7 @@
               <tr>
                 <td class="number-col">${index + 1}</td>
                 <td class="priority-cell">${item.name}</td>
-                <td><span class="status ${statusClass(item.status)}">${item.status}</span></td>
+                <td><span class="badge ${window.statusConfig[item.status] || 'todo'}">${item.status}</span></td>
                 <td class="delivery-cell">${item.stageEta}</td>
                 <td class="delivery-cell">${item.prodEta}</td>
               </tr>
@@ -88,15 +80,14 @@
 
     function renderDependencies(items) {
       document.getElementById("dependenciesList").innerHTML = items.map(item => {
-        const typeClass = item.type.toLowerCase().includes("blocker") ? "red" : "yellow";
-
+        const typeClass = item.type === "Blocker" ? "stopped" : "awaiting-feedback";
         return `
           <li>
             <div>
               <strong>${item.item}</strong>
               <p>${item.status}</p>
             </div>
-            <span class="status ${typeClass}">${item.type}</span>
+            <span class="badge ${typeClass}">${item.type}</span>
           </li>
         `;
       }).join("");
