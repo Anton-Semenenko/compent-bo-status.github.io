@@ -1,3 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: rgb(47, 69, 51);
+}
+
+body {
+  min-height: 100vh;
+}
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -234,6 +246,109 @@ tbody td {
 /* Mobile */
 
 @media (max-width: 640px) {
+  .page {
+    padding: 18px 12px;
+  }
+
+  h1 {
+    font-size: 28px;
+    line-height: 1.15;
+  }
+
+  #lastUpdated {
+    font-size: 14px;
+  }
+
+  .upcoming {
+    gap: 10px;
+  }
+
+  .delivery {
+    width: 100%;
+    min-width: unset;
+    padding: 14px 16px;
+  }
+
+  .card {
+    padding: 14px;
+    margin-bottom: 18px;
+    overflow: hidden;
+  }
+
+  .section-toggle span:first-child {
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .toggle-action {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    width: 100%;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    padding: 12px;
+    overflow: hidden;
+  }
+
+  tbody td {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px solid #eef0f2;
+    background: transparent;
+    font-size: 13px;
+  }
+
+  tbody td:last-child {
+    border-bottom: none;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: #6b7280;
+  }
+
+  .priority-cell,
+  .delivery-cell {
+    text-align: right;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .delivery-cell {
+    font-size: 13px;
+  }
+
+  .badge {
+    padding: 5px 8px;
+    font-size: 12px;
+    white-space: normal;
+    text-align: center;
+  }
+}@media (max-width: 640px) {
   .page {
     padding: 24px 16px;
   }

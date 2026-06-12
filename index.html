@@ -82,12 +82,12 @@
     }
 
     function updateQuestionsTitle(items) {
-      const stoppers = items.filter(i => i.type === "Stopper" || i.type === "Blocker").length;
-      const questions = items.length - stoppers;
+  const stoppers = items.filter(i => i.type === "Stopper" || i.type === "Blocker").length;
+  const questions = items.length - stoppers;
 
-      document.getElementById("questionsTitle").textContent =
-        `Questions & Stoppers (${items.length}) — ${stoppers} Stopper / ${questions} Question`;
-    }
+  document.getElementById("questionsTitle").textContent =
+    `Questions & Stoppers (${items.length}) — ${stoppers} Stoppers / ${questions} Questions`;
+}
 
     function toggleSection(sectionId) {
       const section = document.getElementById(sectionId);
