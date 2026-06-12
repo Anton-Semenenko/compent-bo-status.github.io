@@ -15,21 +15,19 @@
       <div id="upcoming" class="upcoming"></div>
     </header>
 
-    <section class="grid">
-      <div class="card">
-        <h2>Portal</h2>
-        <div id="portalList"></div>
-      </div>
+    <section class="card">
+      <h2>Portal</h2>
+      <div id="portalTable"></div>
+    </section>
 
-      <div class="card">
-        <h2>Hub</h2>
-        <div id="hubList"></div>
-      </div>
+    <section class="card">
+      <h2>Hub</h2>
+      <div id="hubTable"></div>
     </section>
 
     <section class="card">
       <h2>Questions & Stoppers</h2>
-      <div id="dependenciesList"></div>
+      <ol id="dependenciesList" class="dependency-list"></ol>
     </section>
   </main>
 
@@ -48,8 +46,8 @@
             </div>
           `).join("");
 
-        renderScope("portalList", data.portal);
-        renderScope("hubList", data.hub);
+        renderTable("portalTable", data.portal);
+        renderTable("hubTable", data.hub);
         renderDependencies(data.dependencies);
       });
 
@@ -61,29 +59,45 @@
       return "gray";
     }
 
-    function renderScope(elementId, items) {
-      document.getElementById(elementId).innerHTML = items.map(item => `
-        <div class="row">
-          <div>
-            <strong>${item.name}</strong>
-            <div class="eta">Stage: ${item.stageEta} · Prod: ${item.prodEta}</div>
-          </div>
-          <span class="status ${statusClass(item.status)}">${item.status}</span>
-        </div>
-      `).join("");
+    function renderTable(elementId, items) {
+      document.getElementById(elementId).innerHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th class="number-col">#</th>
+              <th>Priority</th>
+              <th>Status</th>
+              <th>Stage delivery</th>
+              <th>Production delivery</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${items.map((item, index) => `
+              <tr>
+                <td class="number-col">${index + 1}</td>
+                <td class="priority-cell">${item.name}</td>
+                <td><span class="status ${statusClass(item.status)}">${item.status}</span></td>
+                <td class="delivery-cell">${item.stageEta}</td>
+                <td class="delivery-cell">${item.prodEta}</td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      `;
     }
 
     function renderDependencies(items) {
       document.getElementById("dependenciesList").innerHTML = items.map(item => {
         const typeClass = item.type.toLowerCase().includes("blocker") ? "red" : "yellow";
+
         return `
-          <div class="row">
+          <li>
             <div>
               <strong>${item.item}</strong>
-              <div class="eta">${item.status}</div>
+              <p>${item.status}</p>
             </div>
             <span class="status ${typeClass}">${item.type}</span>
-          </div>
+          </li>
         `;
       }).join("");
     }
