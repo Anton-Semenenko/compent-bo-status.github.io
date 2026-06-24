@@ -132,6 +132,26 @@ thead th {
   font-weight: 700;
 }
 
+thead th.sortable {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+thead th.sortable:hover {
+  background-color: rgba(55, 65, 100, 0.95);
+}
+
+.sort-indicator {
+  margin-left: 5px;
+  font-size: 11px;
+  opacity: 1;
+}
+
+.sort-indicator.inactive {
+  opacity: 0.35;
+}
+
 thead th:first-child {
   border-radius: 10px 0 0 0;
 }
