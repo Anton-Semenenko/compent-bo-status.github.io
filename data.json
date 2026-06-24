@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18",
+  "lastUpdated": "2026-06-24",
 
   "statusConfig": {
     "Done": "done",
@@ -13,11 +13,11 @@
   "upcomingDeliveries": [
     {
       "scope": "Portal",
-      "delivery": "TBD"
+      "delivery": "Week 25"
     },
     {
       "scope": "Hub",
-      "delivery": "Week 26"
+      "delivery": "Week 27"
     }
   ],
 
@@ -78,19 +78,30 @@
       "status": "In progress",
       "stageEta": "W26",
       "prodEta": "TBD"
+    },
+    {
+      "name": "Audio/Video recording",
+      "status": "In progress",
+      "stageEta": "W26",
+      "prodEta": "TBD"
     }
   ],
 
   "questionsAndStoppers": [
     {
       "item": "General search improvements",
-      "type": "Question",
+      "type": "Stopper",
       "status": "waiting for feedback and updated design"
     },
     {
       "item": "Internal decision on external users invitation",
       "type": "Question",
       "status": "Details and decision needed"
+    },
+    {
+      "item": "List of small priorities",
+      "type": "Question",
+      "status": "To resolve when we have time"
     }
   ]
 }
