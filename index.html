@@ -8,43 +8,54 @@
 </head>
 <body>
   <main class="page">
-    <header class="header">
-      <div>
-        <h1>Project Status</h1>
-        <p id="lastUpdated"></p>
-      </div>
-      <div id="upcoming" class="upcoming"></div>
-    </header>
+    <aside class="quick-access" aria-label="Quick access">
+      <h2>Quick Access</h2>
+      <nav>
+        <a href="#portalSection">Portal <span id="qaPortalCount" class="qa-count">(0)</span></a>
+        <a href="#hubSection">Hub <span id="qaHubCount" class="qa-count">(0)</span></a>
+        <a href="#questionsSection">Questions &amp; Stoppers</a>
+      </nav>
+    </aside>
 
-    <section class="card collapsed-section" id="portalSection">
-      <button class="section-toggle" onclick="toggleSection('portalSection')">
-        <span id="portalTitle">Portal</span>
-        <span class="toggle-action">Show</span>
-      </button>
-      <div class="section-content">
-        <div id="portalTable"></div>
-      </div>
-    </section>
+    <div class="content-column">
+      <header class="header">
+        <div>
+          <h1>Project Status</h1>
+          <p id="lastUpdated"></p>
+        </div>
+        <div id="upcoming" class="upcoming"></div>
+      </header>
 
-    <section class="card collapsed-section" id="hubSection">
-      <button class="section-toggle" onclick="toggleSection('hubSection')">
-        <span id="hubTitle">Hub</span>
-        <span class="toggle-action">Show</span>
-      </button>
-      <div class="section-content">
-        <div id="hubTable"></div>
-      </div>
-    </section>
+      <section class="card" id="portalSection">
+        <button class="section-toggle" onclick="toggleSection('portalSection')">
+          <span id="portalTitle">Portal</span>
+          <span class="toggle-action">Hide</span>
+        </button>
+        <div class="section-content">
+          <div id="portalTable"></div>
+        </div>
+      </section>
 
-    <section class="card collapsed-section" id="questionsSection">
-      <button class="section-toggle" onclick="toggleSection('questionsSection')">
-        <span id="questionsTitle">Questions & Stoppers</span>
-        <span class="toggle-action">Show</span>
-      </button>
-      <div class="section-content">
-        <div id="questionsAndStoppersTable"></div>
-      </div>
-    </section>
+      <section class="card" id="hubSection">
+        <button class="section-toggle" onclick="toggleSection('hubSection')">
+          <span id="hubTitle">Hub</span>
+          <span class="toggle-action">Hide</span>
+        </button>
+        <div class="section-content">
+          <div id="hubTable"></div>
+        </div>
+      </section>
+
+      <section class="card" id="questionsSection">
+        <button class="section-toggle" onclick="toggleSection('questionsSection')">
+          <span id="questionsTitle">Questions & Stoppers</span>
+          <span class="toggle-action">Hide</span>
+        </button>
+        <div class="section-content">
+          <div id="questionsAndStoppersTable"></div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <script>
@@ -78,6 +89,7 @@
         updateSectionTitle("portalTitle", "Portal", data.portal || []);
         updateSectionTitle("hubTitle", "Hub", data.hub || []);
         updateQuestionsTitle(data.questionsAndStoppers || []);
+        updateQuickAccess(data.portal || [], data.hub || []);
 
         renderTable("portalTable", data.portal || [], data);
         renderTable("hubTable", data.hub || [], data);
@@ -105,6 +117,11 @@
       const questions = items.length - stoppers;
       document.getElementById("questionsTitle").textContent =
         `Questions & Stoppers (${items.length}) — ${stoppers} Stoppers / ${questions} Questions`;
+    }
+
+    function updateQuickAccess(portalItems, hubItems) {
+      document.getElementById("qaPortalCount").textContent = `(${portalItems.length})`;
+      document.getElementById("qaHubCount").textContent = `(${hubItems.length})`;
     }
 
     function toggleSection(sectionId) {
@@ -171,9 +188,9 @@
           <tr>
             <td class="number-col" data-label="#">${index + 1}</td>
             <td class="priority-cell" data-label="Priority">${item.name}</td>
-            <td data-label="Status"><span class="badge ${badgeClass}">${item.status}</span></td>
-            <td class="delivery-cell" data-label="Stage delivery">${item.stageEta}</td>
-            <td class="delivery-cell" data-label="Production delivery">${item.prodEta}</td>
+            <td class="task-status-cell" data-label="Status"><span class="badge ${badgeClass}">${item.status}</span></td>
+            <td class="delivery-cell task-stage-cell" data-label="Stage delivery">${item.stageEta}</td>
+            <td class="delivery-cell task-prod-cell" data-label="Production delivery">${item.prodEta}</td>
           </tr>
         `;
       }).join("");
@@ -202,8 +219,8 @@
         return `
           <tr>
             <td class="number-col" data-label="#">${index + 1}</td>
-            <td data-label="Type"><span class="badge ${typeClass}">${item.type}</span></td>
-            <td class="priority-cell" data-label="Item">${item.item}</td>
+            <td class="question-type-cell" data-label="Type"><span class="badge ${typeClass}">${item.type}</span></td>
+            <td class="priority-cell question-item-cell" data-label="Item">${item.item}</td>
             <td data-label="Status / Notes">${item.status}</td>
           </tr>
         `;
