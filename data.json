@@ -124,6 +124,11 @@
         "item": "Check App Store rejection of publish",
         "type": "Question",
         "status": "Vadym to check and recommend actions"
+      },
+      {
+        "item": "Thor's solution to be deployed",
+        "type": "Question",
+        "status": "clarify priority of this task"
     }
   ]
 }
