@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24",
+  "lastUpdated": "2026-06-25",
 
   "statusConfig": {
     "Done": "done",
@@ -13,7 +13,7 @@
   "upcomingDeliveries": [
     {
       "scope": "Portal",
-      "delivery": "Week 26"
+      "delivery": "TBD"
     },
     {
       "scope": "Hub",
@@ -26,6 +26,18 @@
       "name": "Global Search",
       "status": "In QA",
       "stageEta": "Already on stage",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Agenda/Notes sync",
+      "status": "Done",
+      "stageEta": "Already",
+      "prodEta": "Already"
+    },
+    {
+      "name": "WWW gradient controls in Umbraco",
+      "status": "In progress",
+      "stageEta": "TBD",
       "prodEta": "TBD"
     }
   ],
@@ -102,6 +114,11 @@
       "item": "List of small priorities",
       "type": "Question",
       "status": "To resolve when we have time"
+    },
+    {
+      "item": "Graph API setup in Azure",
+      "type": "Question",
+      "status": "agree on a call to go through steps to configure it"
     }
   ]
 }
