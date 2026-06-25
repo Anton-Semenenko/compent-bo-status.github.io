@@ -119,6 +119,11 @@
       "item": "Graph API setup in Azure",
       "type": "Question",
       "status": "agree on a call to go through steps to configure it"
+      },
+      {
+        "item": "Check App Store rejection of publish",
+        "type": "Question",
+        "status": "Vadym to check and recommend actions"
     }
   ]
 }
