@@ -63,6 +63,7 @@
     const STATUS_ORDER = {
       "In progress": 1,
       "In QA": 2,
+      "Waiting QA": 2,
       "Awaiting feedback": 3,
       "To Do": 4,
       "Done": 5,
@@ -71,7 +72,8 @@
 
     // Sort state per table: { col: 'status'|'name'|'stageEta'|'prodEta', dir: 'asc'|'desc' }
     const sortState = {
-      portalTable: { col: "status", dir: "asc" },
+      portalHighTable: { col: "status", dir: "asc" },
+      portalRegularTable: { col: "status", dir: "asc" },
       hubTable: { col: "status", dir: "asc" }
     };
 
@@ -91,7 +93,7 @@
         updateQuestionsTitle(data.questionsAndStoppers || []);
         updateQuickAccess(data.portal || [], data.hub || []);
 
-        renderTable("portalTable", data.portal || [], data);
+        renderPortalTables(data.portal || [], data);
         renderTable("hubTable", data.hub || [], data);
         renderQuestionsAndStoppers(data.questionsAndStoppers || []);
       })
@@ -168,14 +170,42 @@
         state.col = col;
         state.dir = col === "status" ? "asc" : "asc";
       }
-      const sectionKey = tableId === "portalTable" ? "portal" : "hub";
-      renderTable(tableId, globalData[sectionKey] || [], globalData);
+      if (tableId.startsWith("portal")) {
+        renderPortalTables(globalData.portal || [], globalData);
+      } else {
+        renderTable(tableId, globalData.hub || [], globalData);
+      }
     }
 
     function getSortIndicator(tableId, col) {
       const state = sortState[tableId];
       if (state.col !== col) return `<span class="sort-indicator inactive">⇅</span>`;
       return `<span class="sort-indicator">${state.dir === "asc" ? "▲" : "▼"}</span>`;
+    }
+
+    function renderPortalTables(items, data) {
+      const highPriority = items.filter(item => item.priority === "High");
+      const regularPriority = items.filter(item => item.priority !== "High");
+
+      document.getElementById("portalTable").innerHTML = `
+        <section class="priority-group priority-group-high">
+          <div class="priority-group-heading">
+            <h3>High priority</h3>
+            <span>${highPriority.length} ${highPriority.length === 1 ? "task" : "tasks"}</span>
+          </div>
+          <div id="portalHighTable"></div>
+        </section>
+        <section class="priority-group">
+          <div class="priority-group-heading">
+            <h3>Regular priority</h3>
+            <span>${regularPriority.length} ${regularPriority.length === 1 ? "task" : "tasks"}</span>
+          </div>
+          <div id="portalRegularTable"></div>
+        </section>
+      `;
+
+      renderTable("portalHighTable", highPriority, data);
+      renderTable("portalRegularTable", regularPriority, data);
     }
 
     function renderTable(elementId, items, data) {

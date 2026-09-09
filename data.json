@@ -1,11 +1,12 @@
 {
-  "lastUpdated": "2026-08-26",
+  "lastUpdated": "2026-09-09",
 
   "statusConfig": {
     "Done": "done",
     "Development done": "done",
     "In progress": "in-progress",
     "In QA": "in-qa",
+    "Waiting QA": "in-qa",
     "Awaiting feedback": "awaiting-feedback",
     "Stopped": "stopped",
     "To Do": "todo"
@@ -14,11 +15,11 @@
   "upcomingDeliveries": [
     {
       "scope": "Portal",
-      "delivery": "W 35"
+      "delivery": "W 37"
     },
     {
       "scope": "Hub",
-      "delivery": "W 35"
+      "delivery": "TBD"
     }
   ],
 
@@ -30,28 +31,10 @@
       "prodEta": "TBD"
     },
     {
-      "name": "Custom Agenda/Minutes items",
-      "status": "In QA",
-      "stageEta": "W 35",
-      "prodEta": "TBD"
-    },
-    {
       "name": "Add new Agenda item",
       "status": "In QA",
       "stageEta": "Already on stage",
       "prodEta": "TBD"
-    },
-    {
-      "name": "Transfer comments/annotations popup always says \"Agenda\"",
-      "status": "Done",
-      "stageEta": "Already on stage",
-      "prodEta": "W 35"
-    },
-    {
-      "name": "Automatic deletion of inactive users",
-      "status": "Done",
-      "stageEta": "Already on stage",
-      "prodEta": "W 35"
     },
     {
       "name": "Hide list of BA chats",
@@ -72,18 +55,6 @@
       "prodEta": "TBD"
     },
     {
-      "name": "Extract action to board log events",
-      "status": "Done",
-      "stageEta": "Already on stage",
-      "prodEta": "W 35"
-    },
-    {
-      "name": "Log mail in board log",
-      "status": "Done",
-      "stageEta": "Already on stage",
-      "prodEta": "W 35"
-    },
-    {
       "name": "Deleted file shouldn't be in notification",
       "status": "Development done",
       "stageEta": "W 35",
@@ -96,20 +67,42 @@
       "prodEta": "TBD"
     },
     {
-      "name": "Log opening Agenda/Notes to Board log",
-      "status": "Done",
-      "stageEta": "Already on stage",
-      "prodEta": "W 35"
-    },
-    {
       "name": "Do not invite deactivated users",
-      "status": "Done",
+      "status": "Waiting QA",
       "stageEta": "Already on stage",
       "prodEta": "W 35"
     },
     {
       "name": "Implement Word editor from Apryse to have online docs files that can be edited by users",
       "status": "To Do",
+      "stageEta": "TBD",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Folder appearance settings",
+      "priority": "High",
+      "status": "Waiting QA",
+      "stageEta": "TBD",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Board Overview redesign",
+      "priority": "High",
+      "status": "In progress",
+      "stageEta": "TBD",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Performance optimization",
+      "priority": "High",
+      "status": "Waiting QA",
+      "stageEta": "W 38",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Global search. Last searches",
+      "priority": "High",
+      "status": "Waiting QA",
       "stageEta": "TBD",
       "prodEta": "TBD"
     }
@@ -124,8 +117,8 @@
     },
     {
       "name": "Outlook event customization for Hub",
-      "status": "To Do",
-      "stageEta": "TBD",
+      "status": "In progress",
+      "stageEta": "Already on stage",
       "prodEta": "TBD"
     }
   ],
@@ -145,6 +138,11 @@
       "item": "Option to select among AI models in AI chat",
       "type": "Question",
       "status": "discuss whether we need it"
+    },
+    {
+      "item": "Outlook event customization",
+      "type": "Blocker",
+      "status": "Asked Simon to add logo to allowed media"
     }
   ]
 }
