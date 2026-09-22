@@ -96,6 +96,13 @@
       "prodEta": "W 39"
     },
     {
+      "name": "Can we improve camera effects (blur, backgrounds) in BOARD Meet?",
+      "priority": "High",
+      "status": "In progress",
+      "stageEta": "TBD",
+      "prodEta": "TBD"
+    },
+    {
       "name": "Global search. Last searches",
       "priority": "High",
       "status": "Waiting QA",
