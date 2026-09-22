@@ -1,12 +1,14 @@
 {
-  "lastUpdated": "2026-09-09",
+  "lastUpdated": "2026-09-22",
 
   "statusConfig": {
     "Done": "done",
-    "Development done": "done",
+    "Development done": "in-progress",
     "In progress": "in-progress",
     "In QA": "in-qa",
+    "Ready for QA": "in-qa",
     "Waiting QA": "in-qa",
+    "Waiting delivery": "awaiting-feedback",
     "Awaiting feedback": "awaiting-feedback",
     "Stopped": "stopped",
     "To Do": "todo"
@@ -15,42 +17,36 @@
   "upcomingDeliveries": [
     {
       "scope": "Portal",
-      "delivery": "W 37"
+      "delivery": "W 39"
     },
     {
       "scope": "Hub",
-      "delivery": "TBD"
+      "delivery": "W 39"
     }
   ],
 
   "portal": [
     {
       "name": "Highlight tours",
-      "status": "In QA",
-      "stageEta": "Already on stage",
-      "prodEta": "TBD"
-    },
-    {
-      "name": "Add new Agenda item",
-      "status": "In QA",
+      "status": "Waiting delivery",
       "stageEta": "Already on stage",
       "prodEta": "TBD"
     },
     {
       "name": "Hide list of BA chats",
-      "status": "In QA",
+      "status": "Waiting QA",
       "stageEta": "Already on stage",
       "prodEta": "TBD"
     },
     {
       "name": "Better dashboard access on mobile",
-      "status": "In QA",
+      "status": "Waiting delivery",
       "stageEta": "Already on stage",
       "prodEta": "TBD"
     },
     {
       "name": "Invoice email address check",
-      "status": "In QA",
+      "status": "Waiting QA",
       "stageEta": "Already on stage",
       "prodEta": "TBD"
     },
@@ -88,16 +84,16 @@
     {
       "name": "Board Overview redesign",
       "priority": "High",
-      "status": "In progress",
+      "status": "Waiting QA",
       "stageEta": "TBD",
       "prodEta": "TBD"
     },
     {
       "name": "Performance optimization",
       "priority": "High",
-      "status": "Waiting QA",
-      "stageEta": "W 38",
-      "prodEta": "TBD"
+      "status": "In QA",
+      "stageEta": "Already on stage",
+      "prodEta": "W 39"
     },
     {
       "name": "Global search. Last searches",
@@ -111,13 +107,19 @@
   "hub": [
     {
       "name": "Guest users for Board meet",
-      "status": "To Do",
+      "status": "In progress",
       "stageEta": "TBD",
       "prodEta": "TBD"
     },
     {
       "name": "Outlook event customization for Hub",
       "status": "In progress",
+      "stageEta": "Already on stage",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Outlook addin",
+      "status": "Ready for QA",
       "stageEta": "Already on stage",
       "prodEta": "TBD"
     }
@@ -132,17 +134,12 @@
     {
       "item": "AI assistant chat for Umbraco",
       "type": "Question",
-      "status": "Compent to internally discuss and make POC"
+      "status": "Compent to prepare for live configuration"
     },
     {
       "item": "Option to select among AI models in AI chat",
       "type": "Question",
       "status": "discuss whether we need it"
-    },
-    {
-      "item": "Outlook event customization",
-      "type": "Blocker",
-      "status": "Asked Simon to add logo to allowed media"
     }
   ]
 }
