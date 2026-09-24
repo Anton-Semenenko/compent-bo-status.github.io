@@ -1,11 +1,12 @@
 {
-  "lastUpdated": "2026-09-22",
+  "lastUpdated": "2026-09-24",
 
   "statusConfig": {
     "Done": "done",
     "Development done": "in-progress",
     "In progress": "in-progress",
     "In QA": "in-qa",
+    "QA in progress": "in-qa",
     "Ready for QA": "in-qa",
     "Waiting QA": "in-qa",
     "Waiting delivery": "awaiting-feedback",
@@ -17,11 +18,11 @@
   "upcomingDeliveries": [
     {
       "scope": "Portal",
-      "delivery": "W 39"
+      "delivery": "TBD"
     },
     {
       "scope": "Hub",
-      "delivery": "W 39"
+      "delivery": "TBD"
     }
   ],
 
@@ -89,16 +90,9 @@
       "prodEta": "TBD"
     },
     {
-      "name": "Performance optimization",
-      "priority": "High",
-      "status": "In QA",
-      "stageEta": "Already on stage",
-      "prodEta": "W 39"
-    },
-    {
       "name": "Can we improve camera effects (blur, backgrounds) in BOARD Meet?",
       "priority": "High",
-      "status": "In progress",
+      "status": "Waiting QA",
       "stageEta": "TBD",
       "prodEta": "TBD"
     },
@@ -120,13 +114,13 @@
     },
     {
       "name": "Outlook event customization for Hub",
-      "status": "In progress",
+      "status": "QA in progress",
       "stageEta": "Already on stage",
       "prodEta": "TBD"
     },
     {
       "name": "Outlook addin",
-      "status": "Ready for QA",
+      "status": "QA in progress",
       "stageEta": "Already on stage",
       "prodEta": "TBD"
     }
