@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-24",
+  "lastUpdated": "2026-10-02",
 
   "statusConfig": {
     "Done": "done",
@@ -10,6 +10,7 @@
     "Ready for QA": "in-qa",
     "Waiting QA": "in-qa",
     "Waiting delivery": "awaiting-feedback",
+    "Ready for delivery": "awaiting-feedback",
     "Awaiting feedback": "awaiting-feedback",
     "Stopped": "stopped",
     "To Do": "todo"
@@ -18,11 +19,11 @@
   "upcomingDeliveries": [
     {
       "scope": "Portal",
-      "delivery": "TBD"
+      "delivery": "W-41"
     },
     {
       "scope": "Hub",
-      "delivery": "TBD"
+      "delivery": "W-41"
     }
   ],
 
@@ -31,43 +32,43 @@
       "name": "Highlight tours",
       "status": "Waiting delivery",
       "stageEta": "Already on stage",
-      "prodEta": "TBD"
+      "prodEta": "W 41"
     },
     {
       "name": "Hide list of BA chats",
-      "status": "Waiting QA",
+      "status": "QA in progress",
       "stageEta": "Already on stage",
-      "prodEta": "TBD"
+      "prodEta": "W 41"
     },
     {
       "name": "Better dashboard access on mobile",
       "status": "Waiting delivery",
       "stageEta": "Already on stage",
-      "prodEta": "TBD"
+      "prodEta": "W 41"
     },
     {
       "name": "Invoice email address check",
-      "status": "Waiting QA",
+      "status": "QA in progress",
       "stageEta": "Already on stage",
-      "prodEta": "TBD"
+      "prodEta": "W 41"
     },
     {
       "name": "Deleted file shouldn't be in notification",
-      "status": "Development done",
+      "status": "QA in progress",
       "stageEta": "W 35",
-      "prodEta": "TBD"
+      "prodEta": "W 41"
     },
     {
       "name": "Meeting - Notification should be sent to only added users",
-      "status": "In progress",
+      "status": "QA in progress",
       "stageEta": "Already on stage",
-      "prodEta": "TBD"
+      "prodEta": "W 41"
     },
     {
       "name": "Do not invite deactivated users",
-      "status": "Waiting QA",
+      "status": "QA in progress",
       "stageEta": "Already on stage",
-      "prodEta": "W 35"
+      "prodEta": "W 41"
     },
     {
       "name": "Implement Word editor from Apryse to have online docs files that can be edited by users",
@@ -78,30 +79,30 @@
     {
       "name": "Folder appearance settings",
       "priority": "High",
-      "status": "Waiting QA",
-      "stageEta": "TBD",
-      "prodEta": "TBD"
+      "status": "Ready for delivery",
+      "stageEta": "Already on stage",
+      "prodEta": "W 41"
     },
     {
       "name": "Board Overview redesign",
       "priority": "High",
-      "status": "Waiting QA",
-      "stageEta": "TBD",
-      "prodEta": "TBD"
+      "status": "Ready for delivery",
+      "stageEta": "Already on stage",
+      "prodEta": "W 41"
     },
     {
       "name": "Can we improve camera effects (blur, backgrounds) in BOARD Meet?",
       "priority": "High",
-      "status": "Waiting QA",
-      "stageEta": "TBD",
-      "prodEta": "TBD"
+      "status": "QA in progress",
+      "stageEta": "Already on stage",
+      "prodEta": "W 41"
     },
     {
       "name": "Global search. Last searches",
       "priority": "High",
-      "status": "Waiting QA",
-      "stageEta": "TBD",
-      "prodEta": "TBD"
+      "status": "QA in progress",
+      "stageEta": "Already on stage",
+      "prodEta": "W 41"
     }
   ],
 
@@ -109,20 +110,20 @@
     {
       "name": "Guest users for Board meet",
       "status": "In progress",
-      "stageEta": "TBD",
+      "stageEta": "W 41",
       "prodEta": "TBD"
     },
     {
       "name": "Outlook event customization for Hub",
       "status": "QA in progress",
       "stageEta": "Already on stage",
-      "prodEta": "TBD"
+      "prodEta": "W 41"
     },
     {
       "name": "Outlook addin",
       "status": "QA in progress",
       "stageEta": "Already on stage",
-      "prodEta": "TBD"
+      "prodEta": "W 41"
     }
   ],
 
@@ -141,6 +142,11 @@
       "item": "Option to select among AI models in AI chat",
       "type": "Question",
       "status": "discuss whether we need it"
+    },
+    {
+      "item": "Plugin in Outlook setup",
+      "type": "Question",
+      "status": "Compent to set instruction for plugin in Outlook"
     }
   ]
 }
