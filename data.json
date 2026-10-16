@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-13",
+  "lastUpdated": "2026-10-16",
 
   "statusConfig": {
     "Done": "done",
@@ -20,11 +20,11 @@
   "upcomingDeliveries": [
     {
       "scope": "Portal",
-      "delivery": "W 42"
+      "delivery": "TBD"
     },
     {
       "scope": "Hub",
-      "delivery": "W 42"
+      "delivery": "TBD"
     }
   ],
 
@@ -36,42 +36,15 @@
       "prodEta": "TBD"
     },
     {
-      "name": "Global search. Last searches",
+      "name": "Guest users for Board meet",
       "priority": "High",
-      "status": "Ready for live",
+      "status": "Ready for QA",
       "stageEta": "Already on stage",
-      "prodEta": "W 42"
-    },
-    {
-      "name": "Change the input fields in agenda editing to fill the width",
-      "priority": "High",
-      "status": "In QA",
-      "stageEta": "Already on stage",
-      "prodEta": "W 42"
-    },
-    {
-      "name": "Add more text formatting tools in RTEs (edit agenda/minutes, posts, mails, etc.)",
-      "priority": "High",
-      "status": "In QA",
-      "stageEta": "Already on stage",
-      "prodEta": "W 42"
-    },
-    {
-      "name": "Add dropdown with participants in Agenda \"Responsible\" field",
-      "priority": "High",
-      "status": "In QA",
-      "stageEta": "Already on stage",
-      "prodEta": "W 42"
+      "prodEta": "TBD"
     }
   ],
 
   "hub": [
-    {
-      "name": "Guest users for Board meet",
-      "status": "Ready for QA",
-      "stageEta": "Already on stage",
-      "prodEta": "TBD"
-    },
     {
       "name": "Outlook addin",
       "status": "In progress",
@@ -99,7 +72,12 @@
     {
       "item": "Plugin in Outlook setup",
       "type": "Question",
-      "status": "BO to finish configuration for MS tenant"
+      "status": "Compent to finish their part"
+    },
+    {
+      "item": "Task priorities",
+      "type": "Question",
+      "status": "BO to share the priorities Compent to focus"
     }
   ]
 }
