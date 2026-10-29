@@ -37,13 +37,6 @@
       "prodEta": "W 45"
     },
     {
-      "name": "Guest users for Board meet",
-      "priority": "High",
-      "status": "Ready for QA",
-      "stageEta": "Already on stage",
-      "prodEta": "TBD"
-    },
-    {
       "name": "Password resetting issue",
       "priority": "High",
       "status": "Ready for QA",
