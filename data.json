@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-16",
+  "lastUpdated": "2026-10-29",
 
   "statusConfig": {
     "Done": "done",
@@ -20,20 +20,21 @@
   "upcomingDeliveries": [
     {
       "scope": "Portal",
-      "delivery": "TBD"
+      "delivery": "W 45"
     },
     {
       "scope": "Hub",
-      "delivery": "TBD"
+      "delivery": "W 45"
     }
   ],
 
   "portal": [
     {
       "name": "Implement Word editor from Apryse to have online docs files that can be edited by users",
-      "status": "To Do",
-      "stageEta": "TBD",
-      "prodEta": "TBD"
+      "priority": "High",
+      "status": "Ready for QA",
+      "stageEta": "W 44",
+      "prodEta": "W 45"
     },
     {
       "name": "Guest users for Board meet",
@@ -41,17 +42,75 @@
       "status": "Ready for QA",
       "stageEta": "Already on stage",
       "prodEta": "TBD"
-    }
-  ],
-
-  "hub": [
+    },
     {
-      "name": "Outlook addin",
+      "name": "Password resetting issue",
+      "priority": "High",
+      "status": "Ready for QA",
+      "stageEta": "W 44",
+      "prodEta": "W 45"
+    },
+    {
+      "name": "Share comments/annotations",
+      "priority": "High",
+      "status": "Ready for QA",
+      "stageEta": "W 44",
+      "prodEta": "W 45"
+    },
+    {
+      "name": "TOC outline for Apryse",
+      "priority": "High",
+      "status": "Ready for QA",
+      "stageEta": "W 44",
+      "prodEta": "W 45"
+    },
+    {
+      "name": "Issue with dragging to reorder folders in Archive",
+      "priority": "High",
+      "status": "Ready for live",
+      "stageEta": "W 44",
+      "prodEta": "W 45"
+    },
+    {
+      "name": "Add a character counter for text input fields",
+      "priority": "High",
+      "status": "Ready for live",
+      "stageEta": "W 44",
+      "prodEta": "W 45"
+    },
+    {
+      "name": "Control to manage invoices in Umbraco",
+      "status": "To Do",
+      "stageEta": "TBD",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Country field signup form",
+      "status": "To Do",
+      "stageEta": "TBD",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Feature usage stats per user",
+      "status": "To Do",
+      "stageEta": "TBD",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "First time login popup",
+      "status": "Ready for QA",
+      "stageEta": "TBD",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Scalability improvement",
       "status": "In progress",
-      "stageEta": "Already on stage",
+      "stageEta": "TBD",
       "prodEta": "TBD"
     }
   ],
+
+  "hub": [],
 
   "questionsAndStoppers": [
     {
@@ -68,11 +127,6 @@
       "item": "Option to select among AI models in AI chat",
       "type": "Question",
       "status": "discuss whether we need it"
-    },
-    {
-      "item": "Plugin in Outlook setup",
-      "type": "Question",
-      "status": "Compent to finish their part"
     },
     {
       "item": "Task priorities",
