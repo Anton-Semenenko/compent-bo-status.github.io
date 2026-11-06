@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-29",
+  "lastUpdated": "2026-11-06",
 
   "statusConfig": {
     "Done": "done",
@@ -20,11 +20,11 @@
   "upcomingDeliveries": [
     {
       "scope": "Portal",
-      "delivery": "W 45"
+      "delivery": "TBD"
     },
     {
       "scope": "Hub",
-      "delivery": "W 45"
+      "delivery": "TBD"
     }
   ],
 
@@ -32,44 +32,9 @@
     {
       "name": "Implement Word editor from Apryse to have online docs files that can be edited by users",
       "priority": "High",
-      "status": "Ready for QA",
-      "stageEta": "W 44",
-      "prodEta": "W 45"
-    },
-    {
-      "name": "Password resetting issue",
-      "priority": "High",
-      "status": "Ready for QA",
-      "stageEta": "W 44",
-      "prodEta": "W 45"
-    },
-    {
-      "name": "Share comments/annotations",
-      "priority": "High",
-      "status": "Ready for QA",
-      "stageEta": "W 44",
-      "prodEta": "W 45"
-    },
-    {
-      "name": "TOC outline for Apryse",
-      "priority": "High",
-      "status": "Ready for QA",
-      "stageEta": "W 44",
-      "prodEta": "W 45"
-    },
-    {
-      "name": "Issue with dragging to reorder folders in Archive",
-      "priority": "High",
-      "status": "Ready for live",
-      "stageEta": "W 44",
-      "prodEta": "W 45"
-    },
-    {
-      "name": "Add a character counter for text input fields",
-      "priority": "High",
-      "status": "Ready for live",
-      "stageEta": "W 44",
-      "prodEta": "W 45"
+      "status": "QA in progress",
+      "stageEta": "Already on stage",
+      "prodEta": "TBD"
     },
     {
       "name": "Control to manage invoices in Umbraco",
@@ -79,8 +44,8 @@
     },
     {
       "name": "Country field signup form",
-      "status": "To Do",
-      "stageEta": "TBD",
+      "status": "In progress",
+      "stageEta": "W 46",
       "prodEta": "TBD"
     },
     {
@@ -100,10 +65,41 @@
       "status": "In progress",
       "stageEta": "TBD",
       "prodEta": "TBD"
+    },
+    {
+      "name": "OneDrive integration",
+      "status": "In progress",
+      "stageEta": "Already on stage",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Redesign Agenda/Minutes editing",
+      "status": "In progress",
+      "stageEta": "TBD",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Guest users for all types of meeting",
+      "status": "In progress",
+      "stageEta": "W 46",
+      "prodEta": "TBD"
     }
   ],
 
-  "hub": [],
+  "hub": [
+    {
+      "name": "Organizer role to end meeting for all",
+      "status": "Ready for QA",
+      "stageEta": "Already on stage",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "Inactivity tracking in the room",
+      "status": "Ready for QA",
+      "stageEta": "Already on stage",
+      "prodEta": "TBD"
+    }
+  ],
 
   "questionsAndStoppers": [
     {
@@ -125,6 +121,16 @@
       "item": "Task priorities",
       "type": "Question",
       "status": "BO to share the priorities Compent to focus"
+    },
+    {
+      "item": "TOC outline for Apryse",
+      "type": "Blocker",
+      "status": "Apryse license doesn't cover it"
+    },
+    {
+      "item": "OneDrive integration",
+      "type": "Question",
+      "status": "BO to check demo and share feedback"
     }
   ]
 }
