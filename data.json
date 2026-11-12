@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-06",
+  "lastUpdated": "2026-11-12",
 
   "statusConfig": {
     "Done": "done",
@@ -20,11 +20,11 @@
   "upcomingDeliveries": [
     {
       "scope": "Portal",
-      "delivery": "TBD"
+      "delivery": "W 47"
     },
     {
       "scope": "Hub",
-      "delivery": "TBD"
+      "delivery": "W 47"
     }
   ],
 
@@ -34,7 +34,7 @@
       "priority": "High",
       "status": "QA in progress",
       "stageEta": "Already on stage",
-      "prodEta": "TBD"
+      "prodEta": "W 47"
     },
     {
       "name": "Control to manage invoices in Umbraco",
@@ -58,17 +58,17 @@
       "name": "First time login popup",
       "status": "Ready for QA",
       "stageEta": "TBD",
-      "prodEta": "TBD"
+      "prodEta": "W 47"
     },
     {
       "name": "Scalability improvement",
       "status": "In progress",
-      "stageEta": "TBD",
-      "prodEta": "TBD"
+      "stageEta": "Already on stage",
+      "prodEta": "W 47"
     },
     {
       "name": "OneDrive integration",
-      "status": "In progress",
+      "status": "Ready for QA",
       "stageEta": "Already on stage",
       "prodEta": "TBD"
     },
@@ -91,13 +91,13 @@
       "name": "Organizer role to end meeting for all",
       "status": "Ready for QA",
       "stageEta": "Already on stage",
-      "prodEta": "TBD"
+      "prodEta": "W 47"
     },
     {
       "name": "Inactivity tracking in the room",
       "status": "Ready for QA",
       "stageEta": "Already on stage",
-      "prodEta": "TBD"
+      "prodEta": "W 47"
     }
   ],
 
@@ -118,19 +118,9 @@
       "status": "discuss whether we need it"
     },
     {
-      "item": "Task priorities",
-      "type": "Question",
-      "status": "BO to share the priorities Compent to focus"
-    },
-    {
       "item": "TOC outline for Apryse",
       "type": "Blocker",
       "status": "Apryse license doesn't cover it"
-    },
-    {
-      "item": "OneDrive integration",
-      "type": "Question",
-      "status": "BO to check demo and share feedback"
     }
   ]
 }
