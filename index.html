@@ -217,7 +217,9 @@
       const state = sortState[elementId];
       const sorted = sortItems(items, state.col, state.dir);
 
-      const rows = sorted.map((item, index) => {
+      const rows = sorted.length === 0
+        ? `<tr><td colspan="5" data-label="Status">Nothing at this moment</td></tr>`
+        : sorted.map((item, index) => {
         const badgeClass = getStatusClass(item.status, data);
         return `
           <tr>

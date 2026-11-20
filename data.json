@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-12",
+  "lastUpdated": "2026-11-20",
 
   "statusConfig": {
     "Done": "done",
@@ -20,32 +20,25 @@
   "upcomingDeliveries": [
     {
       "scope": "Portal",
-      "delivery": "W 47"
+      "delivery": "TBD"
     },
     {
       "scope": "Hub",
-      "delivery": "W 47"
+      "delivery": "TBD"
     }
   ],
 
   "portal": [
     {
-      "name": "Implement Word editor from Apryse to have online docs files that can be edited by users",
-      "priority": "High",
-      "status": "QA in progress",
-      "stageEta": "Already on stage",
-      "prodEta": "W 47"
-    },
-    {
       "name": "Control to manage invoices in Umbraco",
-      "status": "To Do",
+      "status": "Ready for QA",
       "stageEta": "TBD",
       "prodEta": "TBD"
     },
     {
       "name": "Country field signup form",
-      "status": "In progress",
-      "stageEta": "W 46",
+      "status": "QA in progress",
+      "stageEta": "TBD",
       "prodEta": "TBD"
     },
     {
@@ -55,51 +48,32 @@
       "prodEta": "TBD"
     },
     {
-      "name": "First time login popup",
-      "status": "Ready for QA",
-      "stageEta": "TBD",
-      "prodEta": "W 47"
-    },
-    {
-      "name": "Scalability improvement",
+      "name": "Scalability improvement (part 2)",
       "status": "In progress",
-      "stageEta": "Already on stage",
-      "prodEta": "W 47"
+      "stageEta": "TBD",
+      "prodEta": "TBD"
     },
     {
-      "name": "OneDrive integration",
-      "status": "Ready for QA",
-      "stageEta": "Already on stage",
+      "name": "OneDrive integration (phase 2)",
+      "status": "In progress",
+      "stageEta": "TBD",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "PDF changes",
+      "status": "In progress",
+      "stageEta": "TBD",
       "prodEta": "TBD"
     },
     {
       "name": "Redesign Agenda/Minutes editing",
-      "status": "In progress",
+      "status": "Ready for QA",
       "stageEta": "TBD",
-      "prodEta": "TBD"
-    },
-    {
-      "name": "Guest users for all types of meeting",
-      "status": "In progress",
-      "stageEta": "W 46",
       "prodEta": "TBD"
     }
   ],
 
-  "hub": [
-    {
-      "name": "Organizer role to end meeting for all",
-      "status": "Ready for QA",
-      "stageEta": "Already on stage",
-      "prodEta": "W 47"
-    },
-    {
-      "name": "Inactivity tracking in the room",
-      "status": "Ready for QA",
-      "stageEta": "Already on stage",
-      "prodEta": "W 47"
-    }
-  ],
+  "hub": [],
 
   "questionsAndStoppers": [
     {
@@ -121,6 +95,11 @@
       "item": "TOC outline for Apryse",
       "type": "Blocker",
       "status": "Apryse license doesn't cover it"
+    },
+    {
+      "item": "Global Search in OneDrive",
+      "type": "Question",
+      "status": "Agree on the approach due to privacy concerns"
     }
   ]
 }
