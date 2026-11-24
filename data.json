@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20",
+  "lastUpdated": "2026-11-24",
 
   "statusConfig": {
     "Done": "done",
@@ -20,7 +20,7 @@
   "upcomingDeliveries": [
     {
       "scope": "Portal",
-      "delivery": "TBD"
+      "delivery": "W 48"
     },
     {
       "scope": "Hub",
@@ -30,6 +30,13 @@
 
   "portal": [
     {
+      "name": "File upload flow redesign",
+      "priority": "High",
+      "status": "In progress",
+      "stageEta": "W 48",
+      "prodEta": "W 48"
+    },
+    {
       "name": "Control to manage invoices in Umbraco",
       "status": "Ready for QA",
       "stageEta": "TBD",
@@ -38,7 +45,7 @@
     {
       "name": "Country field signup form",
       "status": "QA in progress",
-      "stageEta": "TBD",
+      "stageEta": "Already on stage",
       "prodEta": "TBD"
     },
     {
@@ -95,11 +102,6 @@
       "item": "TOC outline for Apryse",
       "type": "Blocker",
       "status": "Apryse license doesn't cover it"
-    },
-    {
-      "item": "Global Search in OneDrive",
-      "type": "Question",
-      "status": "Agree on the approach due to privacy concerns"
     }
   ]
 }
