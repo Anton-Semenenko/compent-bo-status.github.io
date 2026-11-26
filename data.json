@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-24",
+  "lastUpdated": "2026-11-26",
 
   "statusConfig": {
     "Done": "done",
@@ -20,7 +20,7 @@
   "upcomingDeliveries": [
     {
       "scope": "Portal",
-      "delivery": "W 48"
+      "delivery": "TBD"
     },
     {
       "scope": "Hub",
@@ -35,6 +35,20 @@
       "status": "In progress",
       "stageEta": "W 48",
       "prodEta": "W 48"
+    },
+    {
+      "name": "Redesign Agenda/Minutes editing",
+      "priority": "High",
+      "status": "Ready for QA",
+      "stageEta": "W 49",
+      "prodEta": "TBD"
+    },
+    {
+      "name": "PDF changes",
+      "priority": "High",
+      "status": "In progress",
+      "stageEta": "W 49",
+      "prodEta": "TBD"
     },
     {
       "name": "Control to manage invoices in Umbraco",
@@ -65,18 +79,6 @@
       "status": "In progress",
       "stageEta": "TBD",
       "prodEta": "TBD"
-    },
-    {
-      "name": "PDF changes",
-      "status": "In progress",
-      "stageEta": "TBD",
-      "prodEta": "TBD"
-    },
-    {
-      "name": "Redesign Agenda/Minutes editing",
-      "status": "Ready for QA",
-      "stageEta": "TBD",
-      "prodEta": "TBD"
     }
   ],
 
@@ -102,6 +104,11 @@
       "item": "TOC outline for Apryse",
       "type": "Blocker",
       "status": "Apryse license doesn't cover it"
+    },
+    {
+      "item": "Autopayments",
+      "type": "Blocker",
+      "status": "To enable Invoices control we need to decide on Autopayments"
     }
   ]
 }
